@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+datos_caja = {
+    "objeto_id": [1,2,3,4,5,6],
+    "peso": ["liviano","pesado","medio","liviano","medio","pesado"],
+    "textura": ["suave","rugoso","rugoso","suave","suave","poroso"],
+    "bordes": [0,12,0,2,4,2],
+    "longitud": [32.5,5.7,24.3,12.1,16.8,87.4],
+    "certeza": [5,5,3,4,5,3]
+}
+
+#transformacion a df
+df_python = pd.DataFrame(datos_caja)
+
+#convertir tipos categoricos y ordinales
+df_python["peso"] = pd.Categorical(df_python["peso"], categories=["liviano", "medio", "pesado"], ordered=True)
+df_python["textura"] = pd.Categorical(df_python["textura"], categories=["suave", "rugoso", "poroso"], ordered=True)
