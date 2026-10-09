@@ -50,3 +50,4 @@ df = pinguinos.dropna()
 
 # Rellenar valores nulos
 df["edad"] = df["edad"].fillna(df["edad"].mean())
+# %%
