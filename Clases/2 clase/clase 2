@@ -9,9 +9,19 @@ datos_caja = {
     "certeza": [5,5,3,4,5,3]
 }
 
-#transformacion a df
+# transformacion a dataframe
 df_python = pd.DataFrame(datos_caja)
 
-#convertir tipos categoricos y ordinales
-df_python["peso"] = pd.Categorical(df_python["peso"], categories=["liviano", "medio", "pesado"], ordered=True)
-df_python["textura"] = pd.Categorical(df_python["textura"], categories=["suave", "rugoso", "poroso"], ordered=True)
+# Convertir tipos categóricos y ordinales
+df_python["textura"] = df_python["textura"].astype("category")
+df_python["peso"] = pd.Categorical(
+    df_python["peso"], 
+    categories=["liviano", "medio", "pesado"], 
+    ordered=True
+)
+
+print("Estructura del DataFrame en Python:")
+
+print(df_python.info())
+
+print(df_python.head())
