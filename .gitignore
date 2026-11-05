@@ -3,3 +3,6 @@ datos/
 Data/
 reportes/
 base_datos/
+clave_gemini.txt
+ticket_groq_qwen.csv
+ticket_gemini.csv
