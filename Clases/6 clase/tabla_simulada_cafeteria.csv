@@ -1,0 +1,11 @@
+id,frecuencia,prod_cafe,prod_comida,prod_frias,prod_otros,atencion,pago_efectivo,pago_tarjeta,pago_transferencia,estudiante,edad,mejora
+1,Nunca,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,20,
+2,1 a 3 veces,1,0,0,0,4,0,1,0,TRUE,19,Más variedad
+3,Más de 8 veces,1,1,0,0,5,1,1,0,TRUE,21,Menos fila
+4,4 a 8 veces,0,1,1,0,3,1,0,0,FALSE,42,Precios más bajos
+5,1 a 3 veces,1,0,1,0,4,0,1,1,FALSE,51,
+6,4 a 8 veces,1,1,1,0,4,0,1,0,TRUE,23,Más lugares para sentarse
+7,Nunca,NA,NA,NA,NA,NA,NA,NA,NA,FALSE,38,
+8,Más de 8 veces,1,0,0,1,5,1,0,1,TRUE,20,Aceptar más medios de pago
+9,1 a 3 veces,0,0,1,0,2,0,1,0,TRUE,22,Mejor atención
+10,4 a 8 veces,1,1,0,0,4,1,1,0,TRUE,24,
