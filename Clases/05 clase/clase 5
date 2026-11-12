@@ -1,0 +1,14 @@
+# Programa: Filtrar_Temperaturas
+
+# 1. Creo el vector / lista con datos
+temperaturas = [33, 13, 18, 25, 30]
+
+# 2. Filtro los elementos mayores a 20
+vector_filtrado = []  # lista vacía para guardar los resultados
+
+for temp in temperaturas: # recorro cada temperatura de la lista y filtro
+    if temp > 20:
+        vector_filtrado.append(temp)
+
+# 3. Mostrar el resultado
+print(vector_filtrado)
