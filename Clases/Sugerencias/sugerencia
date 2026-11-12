@@ -1,0 +1,36 @@
+# ======================
+# SUGERENCIA DE SOCIEDAD
+# ======================
+# Compara cada país con la mediana de todos los países.
+
+BRECHA = "Brecha de tratamiento (%)"
+SUICIDIOS = "Suicidios cada 100k hab."
+CALIDAD = "Calidad del sistema de salud mental"   # verificar si más alto = mejor
+
+
+def sugerir(pais):
+    fila = df_final[df_final[PAIS] == pais]
+    if fila.empty:
+        print(f"{pais} no está en los datos.")
+        return
+    fila = fila.iloc[0]
+    print(f"\nSugerencias para {pais}:")
+    hay_sugerencia = False
+    if fila[BRECHA] > df_final[BRECHA].median():
+        print(" - Mucha gente sin tratamiento: ampliar el acceso a la atención.")
+        hay_sugerencia = True
+    if fila[CALIDAD] < df_final[CALIDAD].median():
+        print(" - Sistema de salud mental por debajo de la mediana: fortalecerlo.")
+        hay_sugerencia = True
+    if fila[SUICIDIOS] > df_final[SUICIDIOS].median():
+        print(" - Tasa de suicidios por encima de la mediana: reforzar la prevención.")
+        hay_sugerencia = True
+    if not hay_sugerencia:
+        print(" - Está mejor que la mediana en las tres: mantener lo que hace.")
+
+
+# Los 10 países con mayor brecha de tratamiento
+print("\nPaíses con mayor brecha de tratamiento:")
+print(df_final.nlargest(10, BRECHA)[[PAIS, BRECHA, SUICIDIOS]].to_string(index=False))
+
+sugerir("Uruguay") #devuelve: Uruguay no está en los datos.
